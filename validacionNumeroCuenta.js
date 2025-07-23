@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 window.addEventListener('DOMContentLoaded', () => {
   const input = document.querySelector('input[name="element_19"]');
   if (input) {
@@ -7,4 +8,5 @@ window.addEventListener('DOMContentLoaded', () => {
         .replace(/^0+/, '');
     });
   }
+});
 });
