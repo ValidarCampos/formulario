@@ -1,11 +1,14 @@
-window.addEventListener('DOMContentLoaded', () => {
-      const input = document.querySelector('input[name="element_19"]');
-      console.log(input);
-      if (input) {
-        input.addEventListener('input', function () {
-          this.value = this.value
-            .replace(/\D/g, '')
-            .replace(/^0+/, '');
-        });
-    }
+window.addEventListener('DOMContentLoaded', function () {
+$('#element_19').on('input', function () {
+  let val = $(this).val();
+
+  // Elimina caracteres no numéricos
+  val = val.replace(/\D/g, '');
+
+  if (val.startsWith('0')) {
+    val = val.substring(1);
+  }
+
+  $(this).val(val);
+});
 });
